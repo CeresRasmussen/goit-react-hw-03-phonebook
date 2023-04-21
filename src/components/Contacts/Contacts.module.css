@@ -14,7 +14,7 @@ ul {
   background-color: #fff;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 190px 190px 20px;
+  grid-template-columns: 180px 180px 30px;
   grid-auto-flow: dense;
   padding: 5px 15px;
   font-size: 16px;
