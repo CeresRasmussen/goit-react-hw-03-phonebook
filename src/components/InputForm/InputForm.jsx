@@ -2,6 +2,7 @@ import css from 'components/InputForm/InputForm.module.css';
 import { nanoid } from 'nanoid';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import PropTypes from 'prop-types';
 
 const initialValue = { name: '', number: '' };
 const schema = yup.object().shape({
@@ -32,6 +33,7 @@ const schema = yup.object().shape({
 });
 
 export const InputForm = ({ onSubmitForm }) => {
+  // console.log('InputForm:');
   const loginInputId = nanoid(5);
   const handleSubmit = (newContact, { resetForm }) => {
     onSubmitForm(newContact);
@@ -75,4 +77,8 @@ export const InputForm = ({ onSubmitForm }) => {
       </Formik>
     </section>
   );
+};
+
+InputForm.propTypes = {
+  onSubmitForm: PropTypes.func,
 };

@@ -1,7 +1,9 @@
 import css from 'components/Filter/Filter.module.css';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Filter = ({ value, onFilterContacts }) => {
+  // console.log('Filter:');
   return (
     <>
       <label className={css.title}>
@@ -16,4 +18,9 @@ export const Filter = ({ value, onFilterContacts }) => {
       </label>
     </>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onFilterContacts: PropTypes.func,
 };

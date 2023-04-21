@@ -12,6 +12,7 @@ export class App extends Component {
   };
 
   componentDidMount = () => {
+    // console.log('componentDidMount:');
     const localStorageContacts = JSON.parse(localStorage.getItem('contacts'));
     if (localStorageContacts)
       this.setState({
@@ -20,6 +21,7 @@ export class App extends Component {
   };
 
   componentDidUpdate = () => {
+    // console.log('componentDidUpdate');
     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
   };
 
@@ -59,6 +61,7 @@ export class App extends Component {
   };
 
   render() {
+    // console.log('render:');
     const contacts = this.filteredContacts();
 
     return (

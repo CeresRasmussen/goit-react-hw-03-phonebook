@@ -1,8 +1,10 @@
 import css from 'components/Contacts/Contacts.module.css';
 import React from 'react';
 import { Notification } from 'components/Notification/Notification';
+import PropTypes from 'prop-types';
 
 export const Contacts = ({ contacts, deleteContacts, children }) => {
+  // console.log('contacts');
   return (
     <section>
       <h2 className={css.title}>Contacts</h2>
@@ -42,4 +44,15 @@ export const Contacts = ({ contacts, deleteContacts, children }) => {
       )}
     </section>
   );
+};
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ),
+  deleteContacts: PropTypes.func,
 };
