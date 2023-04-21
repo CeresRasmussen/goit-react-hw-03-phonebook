@@ -65,6 +65,7 @@ export class App extends Component {
       <div
         style={{
           display: 'flex',
+          width: '460px',
           flexDirection: 'column',
           padding: '20px',
           justifyContent: 'center',
